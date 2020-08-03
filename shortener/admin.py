@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import rezseclyURL
+from .models import RezseclyURL
 
-admin.site.register(rezseclyURL)
+admin.site.register(RezseclyURL)
