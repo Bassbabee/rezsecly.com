@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'm8+$s6_hv1o0lcz7lf&upiqq&m=yr*q-am!%70+0*xm9pip%js'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shortener',
+    'analytics',
 ]
 
 MIDDLEWARE = [
@@ -118,4 +119,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = os.path.join('./static_media/')
+STATIC_ROOT= os.path.join('./static_media/')
+
+SHORTCODE_MAX = 15
+SHORTCODE_MIN = 6
